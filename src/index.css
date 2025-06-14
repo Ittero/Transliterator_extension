@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* -----------GANERAL STYLES----------- */
+
+body {
+    font-family: 'cursive', sans-serif;
+    background-color: #242323;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+ /* -----------HEADER-----------*/
+ .app-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #000000;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 0 0 16px 16px; 
+ }
+
+
+
+ /*-------------MAIN--------------*/
+ .app-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background-color: #242323;
+}
+.language-labels {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.toggle-button {
+  padding: 0.4rem 0.8rem;
+  font-size: 18px;
+  background-color: #0e0c0d;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.toggle-button:hover {
+  background-color: rgb(59, 49, 52);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.textareas {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  flex: 1;
+  height: 400px;
+  width: 500px;
+  padding: 1rem;
+  font-size: 16px;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: rgb(27, 27, 27);
+  border: 1px solid #383232;
+  resize: none;
+}
+textarea::placeholder-shown {
+  color: #dd8585;
+}
+.textarea-wrapper {
+  position: relative;
+}
+.output-wrapper {
+  position: relative;
+  /* width: 100%; */
+}
+
+.output-wrapper textarea {
+  /* width: 100%; */
+  box-sizing: border-box;
+} 
+
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #3e3c3c;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+  background-color: rgb(59, 49, 52);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.copied-label {
+  position: absolute;
+  top: 8px;
+  right: 40px;
+  background-color: #d4edda;
+  color: #155724;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* -----------FOOTER----------- */
+.app-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #000000;
+  color: white;
+  font-size: 16px;
+  border-radius: 12px 12px 0 0;
+}
