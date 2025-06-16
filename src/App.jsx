@@ -1,15 +1,12 @@
-import { useState, useEffect } from 'react';
-import { transliterate } from './translit';
-import './index.css';
-import copyIcon from './assets/copy.svg';
-
-
-
+import { useState, useEffect } from "react";
+import { transliterate } from "./translit";
+import "./index.css";
+import copyIcon from "./assets/copy-icon.svg";
 
 function App() {
-  const [inputText, setInputText] = useState('');
-  const [outputText, setOutputText] = useState('');
-  const [direction, setDirection] = useState('enToUk');
+  const [inputText, setInputText] = useState("");
+  const [outputText, setOutputText] = useState("");
+  const [direction, setDirection] = useState("enToUk");
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
@@ -18,7 +15,7 @@ function App() {
   }, [inputText, direction]);
 
   const toggleDirection = () => {
-    setDirection((prev) => (prev === 'enToUk' ? 'ukToEn' : 'enToUk'));
+    setDirection((prev) => (prev === "enToUk" ? "ukToEn" : "enToUk"));
     setInputText(outputText);
     setOutputText(inputText);
   };
@@ -32,14 +29,16 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>Transliterator</h1>
+        <h1 className="header-name">Transliterator</h1>
       </header>
 
       <main className="app-main">
         <div className="language-labels">
-          <span>{direction === 'enToUk' ? 'Англійська' : 'Українська'}</span>
-          <button className="toggle-button" onClick={toggleDirection}>⇄</button>
-          <span>{direction === 'enToUk' ? 'Українська' : 'Англійська'}</span>
+          <span>{direction === "enToUk" ? "Англійська" : "Українська"}</span>
+          <button className="toggle-button" onClick={toggleDirection}>
+            ⇄
+          </button>
+          <span>{direction === "enToUk" ? "Українська" : "Англійська"}</span>
         </div>
 
         <div className="textareas">
@@ -54,10 +53,17 @@ function App() {
               value={outputText}
               readOnly
             />
-<button className="copy-button" onClick={handleCopy} title="Копіювати">
-  <img src={copyIcon} alt="Copy" style={{ width: '20px', height: '20px' }} />
-</button>
-
+            <button
+              className="copy-button"
+              onClick={handleCopy}
+              title="Копіювати"
+            >
+              <img
+                src={copyIcon}
+                alt="Copy"
+                style={{ width: "20px", height: "20px" }}
+              />
+            </button>
 
             {copied && <span className="copied-label">Скопійовано!</span>}
           </div>
